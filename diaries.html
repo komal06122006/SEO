@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO -->
+    <title>Buy Diaries & Planners Online | StationeryHub</title>
+    <meta name="description" content="Shop premium diaries and planners online. Daily planners, bullet journals, executive diaries at best prices.">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+<style>
+    /* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Container */
+.container {
+    width: 90%;
+    margin: auto;
+    padding: 20px 0;
+}
+
+/* Header */
+header {
+    background:  #ff6b6b;
+    color: white;
+    padding: 15px 0;
+    text-align: center;
+}
+
+/* Navbar */
+.navbar {
+    background: #333;
+}
+
+.navbar ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+.navbar ul li {
+    margin: 10px 15px;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.navbar ul li a:hover {
+    color:  #ff6b6b;
+}
+
+/* Page Title */
+h1 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+p {
+    text-align: center;
+    color: #555;
+}
+
+/* Product Grid */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+/* Product Card */
+.product-card {
+    background: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Product Image */
+.product-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Product Title */
+.product-card h3 {
+    margin: 10px 0;
+}
+
+/* Price */
+.product-card p {
+    font-size: 18px;
+    color:  #ff6b6b;
+    font-weight: bold;
+}
+
+/* Button */
+.product-card button {
+    background:  #ff6b6b;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin-top: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.product-card button:hover {
+    background:  #ff6b6b;
+}
+
+/* Footer */
+footer {
+    margin-top: 30px;
+    padding: 15px;
+    background: #333;
+    color: white;
+    text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .navbar ul {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+</style>
+</head>
+<script>// Cart Array
+let cart = [];
+
+// Add to Cart Function
+function addToCart(productName) {
+    cart.push(productName);
+
+    // Update Cart Count
+    document.getElementById("cart-count").innerText = cart.length;
+
+    // Alert
+    alert(productName + " added to cart!");
+}
+</script>
+<body>
+
+<!-- Header -->
+<header>
+    <div class="container">
+        <h2>Stationery<span>Hub</span></h2>
+    </div>
+    <a href="#">
+    <i class="fas fa-shopping-cart"></i> 
+    <span id="cart-count">0</span>
+</a>
+</header>
+
+<!-- Navbar -->
+<nav class="navbar">
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#categories">Categories</a></li>
+        <li><a href="index.html#products">Products</a></li>
+    </ul>
+</nav>
+
+<!-- Page Title -->
+<section class="container">
+    <h1>Diaries & Planners</h1>
+    <p>Explore our collection of high-quality diaries and planners.</p>
+</section>
+
+<!-- Products -->
+<section class="products container">
+    <div class="product-grid">
+
+        <!-- Product 1 -->
+        <div class="product-card">
+            <img src="images/diary1.jpg" alt="Premium Leather Diary">
+            <h3>Premium Leather Diary</h3>
+            <p>₹150</p>
+            <button class="btn-add" onclick="addToCart('Premium Leather Diary')">
+    Add to Cart
+</button>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="product-card">
+            <img src="images/diary2.jpg" alt="Spiral Bound Diary">
+            <h3>Spiral Bound Diary</h3>
+            <p>₹200</p>
+            <button class="btn-add" onclick="addToCart('Spiral Bound Diary')">
+    Add to Cart
+</button>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="product-card">
+            <img src="images/diary3.jpg" alt="Executive Diary">
+            <h3>Executive Diary</h3>
+            <p>₹350</p>
+            <button class="btn-add" onclick="addToCart('Executive Diary')">
+    Add to Cart
+</button>
+        </div>
+
+        <!-- Product 4 -->
+        <div class="product-card">
+            <img src="images/diary4.jpg" alt="Bullet Journal">
+            <h3>Bullet Journal</h3>
+            <p>₹180</p>
+            <button class="btn-add" onclick="addToCart('Bullet Journal')">
+    Add to Cart
+</button>
+        </div>
+
+        <!-- Product 5 -->
+        <div class="product-card">
+            <img src="images/diary5.jpg" alt="Daily Planner">
+            <h3>Daily Planner</h3>
+            <p>₹220</p>
+            <button class="btn-add" onclick="addToCart('Daily Planner')">
+    Add to Cart
+</button>
+        </div>
+
+        <!-- Product 6 -->
+        <div class="product-card">
+            <img src="images/diary6.jpg" alt="Weekly Planner">
+            <h3>Weekly Planner</h3>
+            <p>₹190</p>
+            <button class="btn-add" onclick="addToCart('Weekly Planner')">
+    Add to Cart
+</button>
+        </div>
+        
+<!-- Product 7 -->
+<div class="product-card">
+    <img src="images/diary7.jpg" alt="Mini Pocket Diary">
+    <h3>Mini Pocket Diary</h3>
+    <p class="price">₹280</p>
+    <button onclick="addToCart('Mini Pocket Diary')" class="btn-add">Add to Cart</button>
+</div>
+
+<!-- Product 8 -->
+<div class="product-card">
+    <img src="images/diary8.jpg" alt="Floral Design Planner">
+    <h3>Floral Design Planner</h3>
+    <p class="price">₹160</p>
+    <button onclick="addToCart('Floral Planner')" class="btn-add">Add to Cart</button>
+</div>
+
+<!-- Product 9 -->
+<div class="product-card">
+    <img src="images/diary9.jpg" alt="Hardcover Journal">
+    <h3>Hardcover Journal</h3>
+    <p class="price">₹140</p>
+    <button onclick="addToCart('Hardcover Journal')" class="btn-add">Add to Cart</button>
+</div>
+
+
+<!-- Product 11 -->
+<div class="product-card">
+    <img src="images/diary11.jpg" alt="Travel Journal">
+    <h3>Travel Journal</h3>
+    <p class="price">₹200</p>
+    <button onclick="addToCart('Travel Journal')" class="btn-add">Add to Cart</button>
+</div>
+
+
+
+
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <p style="text-align:center;">&copy; 2026 StationeryHub</p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>

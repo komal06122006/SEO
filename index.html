@@ -1,0 +1,386 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stationery Shop - Scrapbook Style</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h2>Stationery<span>Hub</span></h2>
+            </div>
+         
+              <div class="search-bar">
+    <input type="text" id="searchInput" placeholder="Search for products...">
+    <button onclick="searchProducts()">
+        <i class="fas fa-search"></i>
+    </button>
+</div>
+
+            <div class="nav-icons">
+                <a href="#"><i class="fas fa-user"></i></a>
+                <a href="#"><i class="fas fa-shopping-cart"></i> <span id="cart-count">0</span></a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation Menu -->
+ <nav class="navbar">
+    <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="shop.html">Shop All</a></li>
+        <li><a href="products.html">Products</a></li>   
+        <li><a href="about.html"class="container about-section">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+</nav>
+    <!-- Hero Section -->
+ <section class="hero">
+    <div class="hero-content">
+        <h1>Unleash Your Creativity</h1>
+        <p>Discover the best stationery for your daily needs.</p>
+        <br><br>
+        <a href="#products" class="btn-primary">Shop Now</a>
+        
+    </div>
+</section>   
+    <!-- Categories Section -->
+   <section class="categories container" id="shop">
+    <h2>Shop by Category</h2>
+        <div class="category-grid">
+            <div class="cat-card">
+                <a href="diaries.html">
+                <img src="Images/diary.jpg" alt="Diaries">
+                <h3>Diaries & Planners</h3>
+                </a>
+                <!-- Diaries Category -->
+<section class="category container">
+
+
+
+</section>
+            </div>
+            <div class="cat-card">
+                <a href="writing.html">
+                <img src="Images/Pens & Pencils.webp" alt="Writing Instruments">
+                <h3>Writing Instruments</h3>
+                </a>
+            </div>
+            <div class="cat-card">
+                <a href="art.html">
+                <img src="Images/Art Supplies.webp" alt="Art">
+                <h3>Art Supplies</h3>
+                </a>
+            </div>
+            <div class="cat-card">
+                <a href="notebook.html">
+                <img src="Images/Notebooks.webp" alt="Notebooks">
+                <h3>Notebooks & Paper</h3>
+                </a>
+            </div>
+            <div class="cat-card">
+                <a href="Office Supplies.html">
+                <img src="Images/office-supplies.avif" alt="Office Supplies">
+                <h3>Office Supplies</h3>
+                </a>
+            </div>
+             <div class="cat-card">
+                <a href="school.html">
+                <img src="Images/School Supplies.jpg" alt="school Supplies">
+                <h3>School Supplies</h3>
+                </a>
+            </div>
+            <div class="cat-card">
+                <a href="gift.html">
+                <img src="Images/Gift & Craft Items.jpg" alt="Gift & Craft Items">
+                <h3>Gift & Craft Items</h3>
+                </a>
+            </div>
+            <div class="cat-card">
+                <a href="desk.html">
+                <img src="Images/Desk Accessories.avif" alt="Desk Accessories">
+                <h3>Desk Accessories</h3>
+                </a>
+            </div>
+        </div>
+    </section>
+
+  
+    <!-- Featured Products Section -->
+     <section class="products container" id="products">
+   <section class="products container" id="products">
+        <div class="products-header">
+            <h2>Featured Products</h2>
+            <p id="product-count">Showing 12 Products</p>
+        </div>
+        <div class="product-grid" id="productGrid">
+            <!-- Product 1 -->
+            <div class="product-card" data-category="diaries" data-price="15">
+                <div class="product-badge">Best Seller</div>
+                <img src="Images/Premium Leather Diary.webp" alt="Product">
+                <div class="product-info">
+                    <h3>Premium Leather Diary</h3>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        <span>(4.5)</span>
+                    </div>
+                    <p class="price">$15.00</p>
+                    <button class="btn-add" onclick="addToCart('Premium Leather Diary')">Add to Cart</button>
+                </div>
+            </div>
+            <!-- Product 2 -->
+            <div class="product-card" data-category="pens" data-price="8">
+                <div class="product-badge sale">Sale</div>
+                <img src="Images/12-Fashion-gel-pen.webp" alt="Product">
+                <div class="product-info">
+                    <h3>Set of 12 Gel Pens</h3>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>(5.0)</span>
+                    </div>
+                    <p class="price"><span class="old-price">$12.00</span> $8.50</p>
+                    <button onclick="addToCart('Gel Pens')" class="btn-add">Add to Cart</button>
+
+                </div>
+            </div>
+            <!-- Product 3 -->
+            <div class="product-card" data-category="art" data-price="22">
+                <img src="Images/Professional Sketchbook A4.jpg" alt="Product">
+                <div class="product-info">
+                    <h3>Professional Sketchbook A4</h3>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>(4.8)</span>
+                    </div>
+                    <p class="price">$22.00</p>
+                    <button onclick="addToCart('Sketchbook')" class="btn-add">Add to Cart</button>
+                </div>
+            </div>
+            <!-- Product 4 -->
+            <div class="product-card" data-category="notebooks" data-price="10">
+                <img src="Images/Hardcover Notebook.jpg" alt="Product">
+                <div class="product-info">
+                    <h3>Hardcover Notebook</h3>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <span>(4.0)</span>
+                    </div>
+                    <p class="price">$10.00</p>
+                   <button onclick="addToCart('Hardcover Notebook')" class="btn-add">Add to Cart</button>
+                </div>
+            </div>
+            <!-- Product 5 -->
+            <div class="product-card" data-category="pens" data-price="5">
+                <div class="product-badge">Hot</div>
+                <img src="Images/Neon Highlighters Set.webp" alt="Product">
+                <div class="product-info">
+                    <h3>Neon Highlighters Set</h3>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>(4.7)</span>
+                    </div>
+                    <p class="price">$5.00</p>
+                    <button onclick="addToCart('Neon Highlighters Set')" class="btn-add">Add to Cart</button>
+                </div>
+            </div>
+            <!-- Product 6 -->
+            <div class="product-card" data-category="diaries" data-price="35">
+                <img src="Images/Executive Diary 2024.jpg" alt="Product">
+                <div class="product-info">
+                    <h3>Executive Diary 2024</h3>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>(4.9)</span>
+                    </div>
+                    <p class="price">$35.00</p>
+                   <button onclick="addToCart('Executive Diary 2024')" class="btn-add">Add to Cart</button>
+                </div>
+            </div>
+            <!-- Product 7 -->
+            <div class="product-card" data-category="art" data-price="18">
+                <img src="images/Watercolor Paint Set.webp" alt="Product">
+                <div class="product-info">
+                    <h3>Watercolor Paint Set</h3>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        <span>(4.6)</span>
+                    </div>
+                    <p class="price">$18.00</p>
+                    <button onclick="addToCart('Watercolor Paint Set')" class="btn-add">Add to Cart</button>
+                </div>
+            </div>
+            <!-- Product 8 -->
+            <div class="product-card" data-category="notebooks" data-price="12">
+                <img src="Images/Dot Grid Notebook.jpg" alt="Product">
+                <div class="product-info">
+                    <h3>Dot Grid Notebook</h3>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>(4.8)</span>
+                    </div>
+                    <p class="price">$12.00</p>
+                   <button onclick="addToCart('Dot Grid Notebook')" class="btn-add">Add to Cart</button>
+                </div>
+            </div>
+            <!-- Product 9 -->
+            <div class="product-card" data-category="pens" data-price="25">
+                <div class="product-badge">New</div>
+                <img src="Images/Premium Ballpoint Pens.jpg" alt="Product">
+                <div class="product-info">
+                    <h3>Premium Ballpoint Pens</h3>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>(4.5)</span>
+                    </div>
+                    <p class="price">$25.00</p>
+                   <button onclick="addToCart('Premium Ballpoint Pens')" class="btn-add">Add to Cart</button>
+                </div>
+            </div>
+            <!-- Product 10 -->
+            <div class="product-card" data-category="art" data-price="30">
+                <img src="Images/Alcohol Markers Set.jpg" alt="Product">
+                <div class="product-info">
+                    <h3>Alcohol Markers Set</h3>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        <span>(4.7)</span>
+                    </div>
+                    <p class="price">$30.00</p>
+                    <button onclick="addToCart('Alcohol Markers Set')" class="btn-add">Add to Cart</button>
+                </div>
+            </div>
+            <!-- Product 11 -->
+
+            <div class="product-card" data-category="diaries" data-price="20">
+                <img src="Images/Spiral Bound Diary.webp" alt="Product">
+                <div class="product-info">
+                    <h3>Spiral Bound Diary</h3>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <span>(4.2)</span>
+                    </div>
+                    <p class="price">$20.00</p>
+                   <button class="btn-add" onclick="addToCart('Spiral Bound Diary')">Add to Cart</button>
+                </div>
+            </div>
+            <!-- Product 12 -->
+            <div class="product-card" data-category="notebooks" data-price="8">
+
+                <img src="Images/Softcover Notebook.webp" alt="Product">
+                <div class="product-info">
+                    <h3>Softcover Notebook</h3>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <span>(4.1)</span>
+                    </div>
+                    <p class="price">$8.00</p>
+                    <button class="btn-add" onclick="addToCart('Softcover Notebook')">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--About-->
+    <section id="about" class="container about-section">
+
+<h2>About Us</h2>
+
+<p>
+StationeryHub is your one-stop shop for premium stationery products. 
+We offer high-quality notebooks, diaries, pens, art supplies and more 
+to help students, artists and professionals stay creative and organized.
+</p>
+
+<p>
+Our mission is to bring beautiful and functional stationery products 
+to everyone who loves writing, planning and creating.
+</p>
+
+</section>
+            <!-- Footer -->
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-section">
+                <h3>StationeryHub</h3>
+                <p>Your one-stop shop for all things stationery.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li>About Us</li>
+                    <li>Contact</li>
+                    <li>Privacy Policy</li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="socials">
+                    <i class="fab fa-facebook"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-twitter"></i>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2023 StationeryHub. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

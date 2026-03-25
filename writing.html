@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Writing Instruments - StationeryHub</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Container */
+.container {
+    width: 90%;
+    margin: auto;
+    padding: 20px 0;
+}
+
+/* Header */
+header {
+    background: #ff6b6b;
+    color: white;
+    padding: 15px 0;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Logo */
+.logo h2 {
+    font-size: 24px;
+}
+
+.logo span {
+    color: black;
+}
+
+/* Search Bar */
+.search-bar {
+    display: flex;
+    width: 40%;
+}
+
+.search-bar input {
+    width: 100%;
+    padding: 8px;
+    border: none;
+    outline: none;
+    border-radius: 5px 0 0 5px;
+}
+
+.search-bar button {
+    padding: 8px 12px;
+    border: none;
+    background: black;
+    color: white;
+    cursor: pointer;
+    border-radius: 0 5px 5px 0;
+}
+
+/* Icons */
+.nav-icons a {
+    color: white;
+    margin-left: 15px;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+/* Navbar */
+.navbar {
+    background: #333;
+}
+
+.navbar ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+.navbar ul li {
+    margin: 10px 15px;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.navbar ul li a:hover,
+.navbar ul li a.active {
+    color: #ff6b6b;
+}
+
+/* Page Title */
+h1, h2 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+p {
+    text-align: center;
+    color: #555;
+}
+
+/* Product Grid */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+/* Product Card */
+.product-card {
+    background: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Product Image */
+.product-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Product Title */
+.product-card h3 {
+    margin: 10px 0;
+}
+
+/* Price */
+.product-card .price {
+    font-size: 18px;
+    color: #ff6b6b;
+    font-weight: bold;
+}
+
+/* Button */
+.product-card button {
+    background: #ff6b6b;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin-top: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.product-card button:hover {
+    background: #e55a5a;
+}
+
+/* Footer */
+footer {
+    margin-top: 30px;
+    padding: 15px;
+    background: #333;
+    color: white;
+    text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .search-bar {
+        width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    .navbar ul {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+    </style>
+</head>
+<body>
+
+<!-- Header -->
+<header>
+    <div class="container">
+        <div class="logo">
+            <h2>Stationery<span>Hub</span></h2>
+        </div>
+
+        <div class="search-bar">
+            <input type="text" placeholder="Search...">
+            <button><i class="fas fa-search"></i></button>
+        </div>
+
+        <div class="nav-icons">
+            <a href="#"><i class="fas fa-user"></i></a>
+            <a href="#"><i class="fas fa-shopping-cart"></i> <span id="cart-count">0</span></a>
+        </div>
+    </div>
+</header>
+
+<!-- Navbar -->
+<nav class="navbar">
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="shop.html">Shop All</a></li>
+        <li><a href="writing.html" class="active">Writing</a></li>
+    </ul>
+</nav>
+
+<!-- Page Title -->
+<section class="container">
+    <h2 style="margin:20px 0;">Writing Instruments</h2>
+</section>
+
+<!-- Products -->
+<section class="products container">
+    <div class="product-grid">
+
+        <!-- 20 Products -->
+        
+        <!-- Product 1 -->
+        <div class="product-card">
+            <img src="images/pen1.jpg">
+            <h3>Ball Pen Blue</h3>
+            <p class="price">$2</p>
+            <button onclick="addToCart('Ball Pen Blue')" class="btn-add">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+            <img src="images/pen2.jpg">
+            <h3>Ball Pen Black</h3>
+            <p class="price">$2</p>
+            <button onclick="addToCart('Ball Pen Black')" class="btn-add">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+            <img src="images/pen3.jpg">
+            <h3>Gel Pen Pack</h3>
+            <p class="price">$5</p>
+            <button onclick="addToCart('Gel Pen Pack')" class="btn-add">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+            <img src="images/pen4.jpg">
+            <h3>Color Gel Pens</h3>
+            <p class="price">$8</p>
+            <button onclick="addToCart('Color Gel Pens')" class="btn-add">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+            <img src="images/pen5.jpg">
+            <h3>Highlighter Set</h3>
+            <p class="price">$6</p>
+            <button onclick="addToCart('Highlighter Set')" class="btn-add">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+            <img src="images/pen6.jpg">
+            <h3>Permanent Marker</h3>
+            <p class="price">$3</p>
+            <button onclick="addToCart('Permanent Marker')" class="btn-add">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+            <img src="images/pen7.jpg">
+            <h3>Whiteboard Marker</h3>
+            <p class="price">$4</p>
+            <button onclick="addToCart('Whiteboard Marker')" class="btn-add">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+            <img src="images/pen8.jpg">
+            <h3>HB Pencil Pack</h3>
+            <p class="price">$3</p>
+            <button onclick="addToCart('HB Pencil')" class="btn-add">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+            <img src="images/pen9.jpg">
+            <h3>Drawing Pencils</h3>
+            <p class="price">$7</p>
+            <button onclick="addToCart('Drawing Pencils')" class="btn-add">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+            <img src="images/pen10.jpg">
+            <h3>Mechanical Pencil</h3>
+            <p class="price">$5</p>
+            <button onclick="addToCart('Mechanical Pencil')" class="btn-add">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+            <img src="images/pen11.jpg">
+            <h3>Fountain Pen</h3>
+            <p class="price">$12</p>
+            <button onclick="addToCart('Fountain Pen')" class="btn-add">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+            <img src="images/pen12.jpg">
+            <h3>Luxury Fountain Pen</h3>
+            <p class="price">$25</p>
+            <button onclick="addToCart('Luxury Fountain Pen')" class="btn-add">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+            <img src="images/pen13.jpg">
+            <h3>Sketch Pens Set</h3>
+            <p class="price">$9</p>
+            <button onclick="addToCart('Sketch Pens')" class="btn-add">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+            <img src="images/pen14.jpg">
+            <h3>Brush Pens</h3>
+            <p class="price">$10</p>
+            <button onclick="addToCart('Brush Pens')" class="btn-add">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+            <img src="images/pen15.jpg">
+            <h3>Calligraphy Pen</h3>
+            <p class="price">$15</p>
+            <button onclick="addToCart('Calligraphy Pen')" class="btn-add">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+            <img src="images/pen16.jpg">
+            <h3>Fineliner Pens</h3>
+            <p class="price">$11</p>
+            <button onclick="addToCart('Fineliner Pens')" class="btn-add">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+            <img src="images/pen17.jpg">
+            <h3>Ink Bottle</h3>
+            <p class="price">$6</p>
+            <button onclick="addToCart('Ink Bottle')" class="btn-add">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+            <img src="images/pen18.jpg">
+            <h3>Stylus Pen</h3>
+            <p class="price">$14</p>
+            <button onclick="addToCart('Stylus Pen')" class="btn-add">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+            <img src="images/pen19.jpg">
+            <h3>Erasable Pen</h3>
+            <p class="price">$5</p>
+            <button onclick="addToCart('Erasable Pen')" class="btn-add">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+            <img src="images/pen20.jpg">
+            <h3>Multicolor Pen</h3>
+            <p class="price">$4</p>
+            <button onclick="addToCart('Multicolor Pen')" class="btn-add">Add to Cart</button>
+        </div>
+
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <p style="text-align:center;">© 2026 StationeryHub</p>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>

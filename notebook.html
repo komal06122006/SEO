@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notebooks & Paper - StationeryHub</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <style>
+/* SAME CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+.container {
+    width: 90%;
+    margin: auto;
+    padding: 20px 0;
+}
+header {
+    background: #ff6b6b;
+    color: white;
+    padding: 15px 0;
+}
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo h2 { font-size: 24px; }
+.logo span { color: black; }
+.search-bar { display: flex; width: 40%; }
+.search-bar input {
+    width: 100%; padding: 8px; border: none; outline: none;
+    border-radius: 5px 0 0 5px;
+}
+.search-bar button {
+    padding: 8px 12px; border: none;
+    background: black; color: white; cursor: pointer;
+    border-radius: 0 5px 5px 0;
+}
+.nav-icons a {
+    color: white; margin-left: 15px;
+    font-size: 18px; text-decoration: none;
+}
+.navbar { background: #333; }
+.navbar ul {
+    display: flex; justify-content: center; list-style: none;
+}
+.navbar ul li { margin: 10px 15px; }
+.navbar ul li a {
+    color: white; text-decoration: none; font-weight: bold;
+}
+.navbar ul li a:hover,
+.navbar ul li a.active { color: #ff6b6b; }
+
+h2 { text-align: center; margin-bottom: 10px; }
+p { text-align: center; color: #555; }
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+.product-card {
+    background: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: 0.3s;
+}
+.product-card:hover { transform: translateY(-5px); }
+.product-card img {
+    width: 100%; height: 180px;
+    object-fit: cover; border-radius: 10px;
+}
+.product-card h3 { margin: 10px 0; }
+.product-card .price {
+    font-size: 18px;
+    color: #ff6b6b;
+    font-weight: bold;
+}
+.product-card button {
+    background: #ff6b6b;
+    color: white; border: none;
+    padding: 10px 15px;
+    margin-top: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.product-card button:hover { background: #e55a5a; }
+
+footer {
+    margin-top: 30px;
+    padding: 15px;
+    background: #333;
+    color: white;
+    text-align: center;
+}
+    </style>
+</head>
+
+<body>
+
+<!-- Header -->
+<header>
+<div class="container">
+<div class="logo">
+<h2>Stationery<span>Hub</span></h2>
+</div>
+
+<div class="search-bar">
+<input type="text" placeholder="Search...">
+<button><i class="fas fa-search"></i></button>
+</div>
+
+<div class="nav-icons">
+<a href="#"><i class="fas fa-user"></i></a>
+<a href="#"><i class="fas fa-shopping-cart"></i> <span id="cart-count">0</span></a>
+</div>
+</div>
+</header>
+
+<!-- Navbar -->
+<nav class="navbar">
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="shop.html">Shop All</a></li>
+<li><a href="notebooks.html" class="active">Notebooks</a></li>
+</ul>
+</nav>
+
+<!-- Title -->
+<section class="container">
+<h2 style="margin:20px 0;">Notebooks & Paper</h2>
+</section>
+
+<!-- Products -->
+<section class="products container">
+<div class="product-grid">
+
+<div class="product-card">
+<img src="images/n1.jpg">
+<h3>Hardcover Notebook</h3>
+<p class="price">$10</p>
+<button onclick="addToCart('Hardcover Notebook')">Add to Cart</button>
+</div>
+
+<div class="product-card">
+<img src="images/n2.jpg">
+<h3>Softcover Notebook</h3>
+<p class="price">$8</p>
+<button onclick="addToCart('Softcover Notebook')">Add to Cart</button>
+</div>
+
+<div class="product-card">
+<img src="images/n3.jpg">
+<h3>Spiral Notebook</h3>
+<p class="price">$9</p>
+<button onclick="addToCart('Spiral Notebook')">Add to Cart</button>
+</div>
+
+<div class="product-card">
+<img src="images/n4.jpg">
+<h3>Grid Notebook</h3>
+<p class="price">$11</p>
+<button onclick="addToCart('Grid Notebook')">Add to Cart</button>
+</div>
+
+<div class="product-card">
+<img src="images/n5.jpg">
+<h3>Dot Grid Notebook</h3>
+<p class="price">$12</p>
+<button onclick="addToCart('Dot Grid Notebook')">Add to Cart</button>
+</div>
+
+<div class="product-card">
+<img src="images/n6.jpg">
+<h3>Planner Diary</h3>
+<p class="price">$15</p>
+<button onclick="addToCart('Planner Diary')">Add to Cart</button>
+</div>
+
+<div class="product-card">
+<img src="images/n7.jpg">
+<h3>Sticky Notes Set</h3>
+<p class="price">$5</p>
+<button onclick="addToCart('Sticky Notes')">Add to Cart</button>
+</div>
+
+<div class="product-card">
+<img src="images/n8.jpg">
+<h3>Writing Pad</h3>
+<p class="price">$7</p>
+<button onclick="addToCart('Writing Pad')">Add to Cart</button>
+</div>
+
+<div class="product-card">
+<img src="images/n9.jpg">
+<h3>Exam Pad</h3>
+<p class="price">$6</p>
+<button onclick="addToCart('Exam Pad')">Add to Cart</button>
+</div>
+
+<div class="product-card">
+<img src="images/n10.jpg">
+<h3>Loose Papers Pack</h3>
+<p class="price">$4</p>
+<button onclick="addToCart('Loose Papers')">Add to Cart</button>
+</div>
+
+</div>
+</section>
+
+<!-- Footer -->
+<footer>
+<div class="container">
+<p>© 2026 StationeryHub</p>
+</div>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
